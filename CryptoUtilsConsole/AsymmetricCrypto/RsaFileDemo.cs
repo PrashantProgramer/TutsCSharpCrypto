@@ -2,7 +2,7 @@
 using System.IO;
 using System.Security.Cryptography;
 using System.Text;
-
+using System.Security;
 namespace CryptoUtilsConsole.AsymmetricCrypto
 {
     public enum KeySizes
@@ -18,7 +18,7 @@ namespace CryptoUtilsConsole.AsymmetricCrypto
     {
         public static void LaunchDemo()
         {
-            string message = "The quick brown fox jumps over the lazy dog";
+            SecureString string message = "The quick brown fox jumps over the lazy dog";
             string publicKey = "./pub.cert";
             string privateKey = "./priv.cert";
             GenerateKeys(publicKey, privateKey);
